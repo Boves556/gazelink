@@ -1,0 +1,20 @@
+.disclaimer-box {
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.disclaimer-box.compact {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.disclaimer-box strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}

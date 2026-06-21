@@ -1,0 +1,54 @@
+.camera-check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.camera-preview-wrap {
+  position: relative;
+  background: #0f172a;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.camera-preview-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.quality-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quality-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.quality-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.quality-dot.ok {
+  background: var(--color-success);
+}
+
+.quality-dot.warn {
+  background: var(--color-medium);
+}
+
+@media (max-width: 768px) {
+  .camera-check-grid {
+    grid-template-columns: 1fr;
+  }
+}
