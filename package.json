@@ -1,0 +1,13 @@
+{
+  "name": "gazelink-workspace",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c blue,green \"backend/venv/bin/uvicorn app.main:app --reload --port 8000 --app-dir backend\" \"yarn --cwd frontend dev\"",
+    "dev:backend": "backend/venv/bin/uvicorn app.main:app --reload --port 8000 --app-dir backend",
+    "dev:frontend": "yarn --cwd frontend dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
